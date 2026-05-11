@@ -1,6 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+using System.Collections.Generic; 
 using System.Text;
 using System.Windows.Forms;
 
@@ -59,12 +58,13 @@ namespace MQPaxWrapperTester
 
             if (component.InvokeRequired)
             {
-                Action<UIControl, PARAM> actionDelegate = delegate(UIControl ctrl, PARAM val)
+              
+               var actionDelegate = new MethodInvoker( delegate
                 {
                     //SetControlVal(ctrl, resp);
                     SetControlVal(eventHandler);
-                };
-                component.Invoke(actionDelegate, component, param);
+                });
+                component.Invoke(actionDelegate, component, param); 
             }
             else
             {

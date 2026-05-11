@@ -21,7 +21,8 @@ namespace MQPaxWrapperTester
         // a35 ip:192.168.1.28
         private void button1_Click(object sender, EventArgs e)
         {
-            int res = posLinkWrapper1.Init("TCP", 90, "192.168.1.23", "10009");
+            string ipAddr = tb_ip_addr.Text.Trim();
+            int res = posLinkWrapper1.Init("TCP", 90, ipAddr, "10009");
             if (res != 0)
             {
                 MessageBox.Show("Faild to init.", "Result");

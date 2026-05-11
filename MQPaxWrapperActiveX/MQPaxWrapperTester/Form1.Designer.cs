@@ -48,11 +48,13 @@
             this.posLinkWrapper1 = new MQPaxWrapper.PosLinkWrapper();
             this.btn_disable = new System.Windows.Forms.Button();
             this.btn_enable = new System.Windows.Forms.Button();
+            this.tb_ip_addr = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(12, 89);
+            this.button1.Location = new System.Drawing.Point(164, 32);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 1;
@@ -62,7 +64,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(144, 78);
+            this.button2.Location = new System.Drawing.Point(94, 137);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(136, 23);
             this.button2.TabIndex = 2;
@@ -72,7 +74,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(180, 52);
+            this.textBox1.Location = new System.Drawing.Point(130, 111);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(100, 20);
             this.textBox1.TabIndex = 3;
@@ -81,7 +83,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(120, 55);
+            this.label1.Location = new System.Drawing.Point(70, 114);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(51, 13);
             this.label1.TabIndex = 4;
@@ -90,7 +92,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(120, 29);
+            this.label2.Location = new System.Drawing.Point(70, 88);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(53, 13);
             this.label2.TabIndex = 5;
@@ -98,7 +100,7 @@
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(180, 26);
+            this.textBox2.Location = new System.Drawing.Point(130, 85);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(100, 20);
             this.textBox2.TabIndex = 6;
@@ -106,7 +108,7 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(96, 189);
+            this.button3.Location = new System.Drawing.Point(94, 240);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(144, 23);
             this.button3.TabIndex = 7;
@@ -116,7 +118,7 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(96, 218);
+            this.button4.Location = new System.Drawing.Point(94, 269);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(144, 23);
             this.button4.TabIndex = 8;
@@ -126,7 +128,7 @@
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(93, 296);
+            this.button5.Location = new System.Drawing.Point(96, 324);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(142, 23);
             this.button5.TabIndex = 10;
@@ -136,7 +138,7 @@
             // 
             // tv_ecr_ref_num
             // 
-            this.tv_ecr_ref_num.Location = new System.Drawing.Point(93, 270);
+            this.tv_ecr_ref_num.Location = new System.Drawing.Point(96, 298);
             this.tv_ecr_ref_num.Name = "tv_ecr_ref_num";
             this.tv_ecr_ref_num.Size = new System.Drawing.Size(100, 20);
             this.tv_ecr_ref_num.TabIndex = 11;
@@ -145,7 +147,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(13, 273);
+            this.label3.Location = new System.Drawing.Point(16, 301);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(74, 13);
             this.label3.TabIndex = 12;
@@ -170,7 +172,7 @@
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(96, 160);
+            this.button6.Location = new System.Drawing.Point(94, 211);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(144, 23);
             this.button6.TabIndex = 16;
@@ -180,7 +182,7 @@
             // 
             // button7
             // 
-            this.button7.Location = new System.Drawing.Point(96, 131);
+            this.button7.Location = new System.Drawing.Point(94, 182);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(144, 23);
             this.button7.TabIndex = 17;
@@ -190,7 +192,7 @@
             // 
             // button8
             // 
-            this.button8.Location = new System.Drawing.Point(16, 333);
+            this.button8.Location = new System.Drawing.Point(19, 361);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(144, 23);
             this.button8.TabIndex = 18;
@@ -213,7 +215,7 @@
             this.posLinkWrapper1.enableWrapperLog = false;
             this.posLinkWrapper1.errorCode = 0;
             this.posLinkWrapper1.errorMessage = null;
-            this.posLinkWrapper1.Location = new System.Drawing.Point(12, 12);
+            this.posLinkWrapper1.Location = new System.Drawing.Point(4, 4);
             this.posLinkWrapper1.manageRequestAccountNumber = null;
             this.posLinkWrapper1.manageRequestButton1 = null;
             this.posLinkWrapper1.manageRequestButton2 = null;
@@ -346,11 +348,30 @@
             this.btn_enable.UseVisualStyleBackColor = true;
             this.btn_enable.Click += new System.EventHandler(this.btn_enable_Click);
             // 
+            // tb_ip_addr
+            // 
+            this.tb_ip_addr.Location = new System.Drawing.Point(139, 6);
+            this.tb_ip_addr.Name = "tb_ip_addr";
+            this.tb_ip_addr.Size = new System.Drawing.Size(100, 20);
+            this.tb_ip_addr.TabIndex = 22;
+            this.tb_ip_addr.Text = "192.168.1.42";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(73, 9);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(60, 13);
+            this.label5.TabIndex = 23;
+            this.label5.Text = "Terminal IP";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(630, 451);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.tb_ip_addr);
             this.Controls.Add(this.btn_enable);
             this.Controls.Add(this.btn_disable);
             this.Controls.Add(this.btn_write);
@@ -401,6 +422,8 @@
         private System.Windows.Forms.Button btn_write;
         private System.Windows.Forms.Button btn_disable;
         private System.Windows.Forms.Button btn_enable;
+        private System.Windows.Forms.TextBox tb_ip_addr;
+        private System.Windows.Forms.Label label5;
     }
 }
 

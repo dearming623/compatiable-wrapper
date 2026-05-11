@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 using MQWebApi;
+using System.IO;
 
 namespace MoleQ.WebApi.Tester
 {
@@ -88,8 +89,8 @@ namespace MoleQ.WebApi.Tester
 
 
             MessageBox.Show(LocalStorage.GetItem("AuthOEM").ToString());
-         
-           
+
+
         }
 
         private void btnStartMonitor_Click(object sender, EventArgs e)
@@ -107,6 +108,16 @@ namespace MoleQ.WebApi.Tester
             WebApiWrapper.OnStopMonitor();
             btnStartMonitor.Enabled = true;
             btnStopMonitor.Enabled = false;
+        }
+
+        private void btnDownloadFile_Click(object sender, EventArgs e)
+        {
+            var downloadUrl = tbDownloadUrl.Text.Trim();
+            var filename = Guid.NewGuid().ToString().Replace("-", "") + ".png";
+            var savePath = Path.Combine(Environment.CurrentDirectory, filename);
+            WebApiWrapper.DownloadFile(downloadUrl, savePath);
+
+
         }
     }
 }

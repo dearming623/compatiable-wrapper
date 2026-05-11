@@ -42,12 +42,14 @@
             this.tb_stn = new System.Windows.Forms.TextBox();
             this.btn_test_storage = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.btnStartMonitor = new System.Windows.Forms.Button();
-            this.btnStopMonitor = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
-            this.tbListenFolder = new System.Windows.Forms.TextBox();
             this.rtbMessageReceive = new System.Windows.Forms.RichTextBox();
+            this.tbListenFolder = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.btnStopMonitor = new System.Windows.Forms.Button();
+            this.btnStartMonitor = new System.Windows.Forms.Button();
             this.WebApiWrapper = new MQWebApi.Tools();
+            this.btnDownloadFile = new System.Windows.Forms.Button();
+            this.tbDownloadUrl = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -173,15 +175,30 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Message Receiver";
             // 
-            // btnStartMonitor
+            // rtbMessageReceive
             // 
-            this.btnStartMonitor.Location = new System.Drawing.Point(133, 45);
-            this.btnStartMonitor.Name = "btnStartMonitor";
-            this.btnStartMonitor.Size = new System.Drawing.Size(75, 23);
-            this.btnStartMonitor.TabIndex = 0;
-            this.btnStartMonitor.Text = "Start Monitor";
-            this.btnStartMonitor.UseVisualStyleBackColor = true;
-            this.btnStartMonitor.Click += new System.EventHandler(this.btnStartMonitor_Click);
+            this.rtbMessageReceive.Location = new System.Drawing.Point(16, 74);
+            this.rtbMessageReceive.Name = "rtbMessageReceive";
+            this.rtbMessageReceive.Size = new System.Drawing.Size(273, 57);
+            this.rtbMessageReceive.TabIndex = 4;
+            this.rtbMessageReceive.Text = "";
+            // 
+            // tbListenFolder
+            // 
+            this.tbListenFolder.Location = new System.Drawing.Point(89, 19);
+            this.tbListenFolder.Name = "tbListenFolder";
+            this.tbListenFolder.Size = new System.Drawing.Size(200, 20);
+            this.tbListenFolder.TabIndex = 3;
+            this.tbListenFolder.Text = "\\\\192.168.1.69\\Work\\Ming\\tmp";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(13, 22);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(70, 13);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Listen Folder:";
             // 
             // btnStopMonitor
             // 
@@ -194,30 +211,15 @@
             this.btnStopMonitor.UseVisualStyleBackColor = true;
             this.btnStopMonitor.Click += new System.EventHandler(this.btnStopMonitor_Click);
             // 
-            // label3
+            // btnStartMonitor
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(13, 22);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(70, 13);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Listen Folder:";
-            // 
-            // tbListenFolder
-            // 
-            this.tbListenFolder.Location = new System.Drawing.Point(89, 19);
-            this.tbListenFolder.Name = "tbListenFolder";
-            this.tbListenFolder.Size = new System.Drawing.Size(200, 20);
-            this.tbListenFolder.TabIndex = 3;
-            this.tbListenFolder.Text = "\\\\192.168.1.69\\Work\\Ming\\tmp";
-            // 
-            // rtbMessageReceive
-            // 
-            this.rtbMessageReceive.Location = new System.Drawing.Point(16, 74);
-            this.rtbMessageReceive.Name = "rtbMessageReceive";
-            this.rtbMessageReceive.Size = new System.Drawing.Size(273, 57);
-            this.rtbMessageReceive.TabIndex = 4;
-            this.rtbMessageReceive.Text = "";
+            this.btnStartMonitor.Location = new System.Drawing.Point(133, 45);
+            this.btnStartMonitor.Name = "btnStartMonitor";
+            this.btnStartMonitor.Size = new System.Drawing.Size(75, 23);
+            this.btnStartMonitor.TabIndex = 0;
+            this.btnStartMonitor.Text = "Start Monitor";
+            this.btnStartMonitor.UseVisualStyleBackColor = true;
+            this.btnStartMonitor.Click += new System.EventHandler(this.btnStartMonitor_Click);
             // 
             // WebApiWrapper
             // 
@@ -227,11 +229,31 @@
             this.WebApiWrapper.TabIndex = 1;
             this.WebApiWrapper.wrapperConfig = null;
             // 
+            // btnDownloadFile
+            // 
+            this.btnDownloadFile.Location = new System.Drawing.Point(317, 544);
+            this.btnDownloadFile.Name = "btnDownloadFile";
+            this.btnDownloadFile.Size = new System.Drawing.Size(95, 23);
+            this.btnDownloadFile.TabIndex = 14;
+            this.btnDownloadFile.Text = "Download File";
+            this.btnDownloadFile.UseVisualStyleBackColor = true;
+            this.btnDownloadFile.Click += new System.EventHandler(this.btnDownloadFile_Click);
+            // 
+            // tbDownloadUrl
+            // 
+            this.tbDownloadUrl.Location = new System.Drawing.Point(11, 546);
+            this.tbDownloadUrl.Name = "tbDownloadUrl";
+            this.tbDownloadUrl.Size = new System.Drawing.Size(300, 20);
+            this.tbDownloadUrl.TabIndex = 15;
+            this.tbDownloadUrl.Text = "http://192.168.1.76:8080/api/image/download/signature_image_null.png";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(761, 570);
+            this.Controls.Add(this.tbDownloadUrl);
+            this.Controls.Add(this.btnDownloadFile);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btn_test_storage);
             this.Controls.Add(this.tb_stn);
@@ -277,6 +299,8 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox tbListenFolder;
         private System.Windows.Forms.RichTextBox rtbMessageReceive;
+        private System.Windows.Forms.Button btnDownloadFile;
+        private System.Windows.Forms.TextBox tbDownloadUrl;
     }
 }
 
