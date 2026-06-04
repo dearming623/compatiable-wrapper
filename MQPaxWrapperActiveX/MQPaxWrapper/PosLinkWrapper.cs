@@ -510,6 +510,7 @@ namespace MQPaxWrapper
         public string manageResponseEntryMode { get; set; }
         public string manageResponseExpiryDate { get; set; }
         public string manageResponseText { get; set; }
+        public string manageResponseExtData { get; set; }
         #endregion
 
         #endregion

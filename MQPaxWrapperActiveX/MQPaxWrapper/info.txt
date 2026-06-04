@@ -1,4 +1,8 @@
-﻿MQPaxWrapper v1.20
+﻿MQPaxWrapper v1.21
+1. 增加OrigRefNum入参函数支持
+2. 增加manageResponseExtData赋值
+
+MQPaxWrapper v1.20
 1. 调整大量代码，代码搬迁到另外一个类中处理
 2. 增加poslink处于null状态异常处理
 3. 代码调整为单例实现，保证poslink为单一个对象

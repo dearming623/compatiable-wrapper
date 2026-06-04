@@ -426,6 +426,10 @@ namespace MQPaxWrapper
             posLinkWrapper.manageResponseEntryMode = manageResponse.EntryMode;
             posLinkWrapper.manageResponseExpiryDate = manageResponse.ExpiryDate;
             posLinkWrapper.manageResponseText = manageResponse.Text;
+            posLinkWrapper.manageResponseExtData = manageResponse.ExtData;
+
+            //Kevin特殊要求，因为PB看不到暴露的属性  ExtData -> Track3Data
+            posLinkWrapper.manageResponseTrack3Data = manageResponse.ExtData;
         }
 
         //private CommSetting CreateSetting(PosLinkWrapper posLinkWrapper)
@@ -650,6 +654,7 @@ namespace MQPaxWrapper
             posLinkWrapper.paymentRequestECRefNum = ECRefNum;
             posLinkWrapper.paymentRequestExtData = ExtData;
             posLinkWrapper.paymentRequestCashbackAmt = CashbackAmt;
+            posLinkWrapper.paymentRequestOrigRefNum = StringUtils.GetXmlTagValue(ExtData, "OrigRefNum");
 
             //v1.14拆开extdata为传参变量和pax的extdata
             posLinkWrapper.paymentRequestExtData = StringUtils.GetPaxExtData(ExtData);
@@ -716,6 +721,7 @@ namespace MQPaxWrapper
             posLinkWrapper.manageResponseEntryMode = "";
             posLinkWrapper.manageResponseExpiryDate = "";
             posLinkWrapper.manageResponseText = "";
+            posLinkWrapper.manageResponseExtData = "";
 
             isCancelTask = false;
 
