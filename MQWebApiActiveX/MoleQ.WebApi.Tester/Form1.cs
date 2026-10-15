@@ -28,7 +28,8 @@ namespace MoleQ.WebApi.Tester
 
 
             //WebApiWrapper.SetCharSet("ISO-8859-1");
-            WebApiWrapper.OnPost(url, body);
+            //WebApiWrapper.OnPost(url, body);
+            WebApiWrapper.OnPost2(url, body, 30);
         }
 
         void tools1_DataError(string errMsg)

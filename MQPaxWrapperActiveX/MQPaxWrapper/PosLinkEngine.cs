@@ -545,6 +545,8 @@ namespace MQPaxWrapper
 
             if (result.Code == ProcessTransResultCode.OK)
             {
+                Thread.Sleep(300); //[CAI-PAXv313]<PAX_313>  20191211:HP - set delay before getting Payment response.
+                
                 ManageResponse manageResponse = poslink.ManageResponse;
                 if (manageResponse != null && manageResponse.ResultCode != null)
                 {
@@ -800,9 +802,11 @@ namespace MQPaxWrapper
             }
 
             posLinkWrapper.transResultMsg = result.Msg;
-            if (result.Code == POSLink.ProcessTransResultCode.OK)
+            if (result.Code == ProcessTransResultCode.OK)
             {
-                POSLink.PaymentResponse paymentResponse = poslink.PaymentResponse;
+                Thread.Sleep(300); //[CAI-PAXv313]<PAX_313>  20191211:HP - set delay before getting Payment response.
+                
+                PaymentResponse paymentResponse = poslink.PaymentResponse;
                 if (paymentResponse != null && paymentResponse.ResultCode != null)
                 {
                     return paymentResponse;

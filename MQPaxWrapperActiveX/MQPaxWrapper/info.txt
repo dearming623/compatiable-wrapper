@@ -1,4 +1,7 @@
-﻿MQPaxWrapper v1.21
+﻿MQPaxWrapper v1.22
+1.delay (300ms) before reading the payment response from PAX. 
+
+MQPaxWrapper v1.21
 1. 增加OrigRefNum入参函数支持
 2. 增加manageResponseExtData赋值
 
